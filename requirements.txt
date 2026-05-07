@@ -1,0 +1,16 @@
+streamlit
+
+langchain
+langgraph
+langchain-core
+langchain-community
+langchain-huggingface
+langchain-google-genai
+sentence-transformers
+transformers
+torch
+faiss-cpu
+unstructured[pdf]
+pypdf
+pdf2image
+pillow
