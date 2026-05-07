@@ -74,7 +74,7 @@ Determines whether retrieved context is:
 * PARTIAL
 * INSUFFICIENT
 
-** 3️⃣ Generator Node**
+**3️⃣ Generator Node**
 Generates responses based on evidence quality:
 
 * Fully grounded answers
