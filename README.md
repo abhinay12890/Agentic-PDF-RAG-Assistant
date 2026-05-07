@@ -64,17 +64,17 @@ The system dynamically retrieves relevant chunks, evaluates evidence quality, an
 
 The system uses a 3-node LangGraph workflow:
 
-**1️⃣ Retriever Node**
+**1️⃣ Retriever Node**\
 Retrieves relevant chunks from FAISS
 Uses dynamic thresholding based on similarity score
 
-**2️⃣ Evidence Evaluator Node**
+**2️⃣ Evidence Evaluator Node**\
 Determines whether retrieved context is:
 * FULL
 * PARTIAL
 * INSUFFICIENT
 
-**3️⃣ Generator Node**
+**3️⃣ Generator Node**\
 Generates responses based on evidence quality:
 
 * Fully grounded answers
