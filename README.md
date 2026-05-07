@@ -1,4 +1,4 @@
-# 📄 Agentic RAG System with LangGraph
+# 📄 Agentic PDF RAG Assistant
 An intelligent Document Question Answering System built using LangGraph, LangChain, FAISS, HuggingFace Embeddings, and Gemini 2.5 Flash.
 
 This project allows users to upload PDF documents and ask natural language questions.
@@ -60,6 +60,28 @@ The system dynamically retrieves relevant chunks, evaluates evidence quality, an
                            │ Generate Answer  │
                            └──────────────────┘
 ```
+## Chunking Strategy
+Uses:
+* RecursiveCharacterTextSplitter
+* Chunk Size: 1000
+* Chunk Overlap: 200
+
+**Embedding Model:**
+`sentence-transformers/all-MiniLM-L6-v2`
+
+**Retrieval Strategy**
+dynamic thresholding based on similarity scores to adapt to query quality and reduce noisy chunks.
+`threshold = min_score * 1.2`
+
+**Evidence-Aware Generation**
+
+The system evaluates whether retrieved context sufficiently answers the question.
+
+This reduces:
+* Hallucinations
+* Irrelevant responses
+* Overconfident generation
+
 ## 🧠 Agent Workflow
 
 The system uses a 3-node LangGraph workflow:
@@ -81,6 +103,7 @@ Generates responses based on evidence quality:
 * Hybrid contextual + general knowledge answers
 * Graceful fallback responses
 
+
 ## 📁 Project Structure
 ```
 .
@@ -93,6 +116,20 @@ Generates responses based on evidence quality:
 ├── uploaded_files/
 ├── local_embedding_model/
 ├── attention.pdf
-├── Working.ipynb           # Prototype notebook
+├── Prototype.ipynb          # Prototype notebook
 └── Dockerfile
+```
+## 📦 Installation
+```
+git clone https://github.com/abhinay12890/Agentic-PDF-RAG-Assistant.git
+cd Agentic-PDF-RAG-Assistant
+pip install -r requirements.txt
+```
+Create `.env` file
+```
+google_api=YOUR_GEMINI_API_KEY
+```
+Run Application
+```
+streamlit run main.py
 ```
