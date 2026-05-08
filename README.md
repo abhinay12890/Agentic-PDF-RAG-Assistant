@@ -3,7 +3,10 @@ An intelligent Document Question Answering System built using LangGraph, LangCha
 
 This project allows users to upload PDF documents and ask natural language questions.
 The system dynamically retrieves relevant chunks, evaluates evidence quality, and generates grounded answers using an agentic workflow.
-
+--
+## Streamlit UI
+![response.png](response.png)
+--
 ## 🚀 Features
 * 📂 Upload PDF documents
 * 🧠 Semantic Retrieval using FAISS Vector Database
