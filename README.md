@@ -1,4 +1,4 @@
-# 📄 Agentic PDF RAG Assistant
+# 📄 Agentic Document Intelligence System
 An intelligent Document Question Answering System built using LangGraph, LangChain, FAISS, HuggingFace Embeddings, and Gemini 2.5 Flash.
 
 This project allows users to upload PDF documents and ask natural language questions.
